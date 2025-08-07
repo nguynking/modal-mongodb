@@ -17,6 +17,8 @@ def ping():
 
     uri = f"mongodb+srv://{user}:{password}@{host}/"
 
+    print(uri)
+
     client = MongoClient(uri, server_api=ServerApi("1"))
     try:
         client.admin.command("ping")
